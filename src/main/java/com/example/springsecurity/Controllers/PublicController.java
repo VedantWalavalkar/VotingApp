@@ -36,12 +36,12 @@ public class PublicController {
         return new ResponseEntity("Voter registered", HttpStatus.CREATED);
     }
 
-    @GetMapping("/logout")
-    public String fetchSignoutSite(HttpServletRequest request, HttpServletResponse response) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        return "redirect:/login?logout";
-    }
+//    @GetMapping("/logout")
+//    public String fetchSignoutSite(HttpServletRequest request, HttpServletResponse response) {
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if (auth != null) {
+//            new SecurityContextLogoutHandler().logout(request, response, auth);
+//        }
+//        return "redirect:/login?logout";
+//    }
 }

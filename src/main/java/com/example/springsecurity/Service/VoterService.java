@@ -20,6 +20,7 @@ public class VoterService {
             throw new VoterNotFoundException("Voter not found");
         Voter voter = optionalVoter.get();
         Vote vote = voter.getVote();
+
         if(candId == 1)
             vote.setCand1(true);
         else if (candId == 2)
